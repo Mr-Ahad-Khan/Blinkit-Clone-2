@@ -1,0 +1,48 @@
+const products = [
+  {
+    id: 1,
+    name: 'Premium Apple',
+    description: 'Fresh and juicy apples picked from trusted farms.',
+    details: 'These premium apples are crisp, naturally sweet, and perfect for daily snacking, fruit salads, juices, and desserts.',
+    amount: 120,
+    quantity: '1 kg',
+    category: 'Fresh Fruits',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 2,
+    name: 'Organic Banana',
+    description: 'Naturally sweet bananas, perfect for daily nutrition.',
+    details: 'Organic bananas are rich in energy and make a healthy choice for breakfast, smoothies, and everyday snacking.',
+    amount: 60,
+    quantity: '1 dozen',
+    category: 'Fresh Fruits',
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 3,
+    name: 'Fresh Orange',
+    description: 'Vitamin-rich oranges with bright citrus flavor.',
+    details: 'Fresh oranges are juicy, refreshing, and loaded with citrus flavor for juices, salads, and healthy snacks.',
+    amount: 90,
+    quantity: '1 kg',
+    category: 'Fresh Fruits',
+    rating: 4.6,
+    image: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    id: 4,
+    name: 'Green Grapes',
+    description: 'Crisp seedless grapes for snacks, juices, and salads.',
+    details: 'Green grapes are fresh, crunchy, and sweet. They are ideal for quick snacks, lunch boxes, and fruit bowls.',
+    amount: 140,
+    quantity: '500 g',
+    category: 'Fresh Fruits',
+    rating: 4.5,
+    image: 'https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=900&q=80',
+  },
+];
+
+export default products;
