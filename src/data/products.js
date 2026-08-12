@@ -1,3 +1,5 @@
+import orangeImage from '../assets/orange.svg';
+
 const products = [
   {
     id: 1,
@@ -30,7 +32,7 @@ const products = [
     quantity: '1 kg',
     category: 'Fresh Fruits',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?auto=format&fit=crop&w=900&q=80',
+    image: orangeImage,
   },
   {
     id: 4,

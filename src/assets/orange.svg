@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Orange fruit</title>
+  <desc id="desc">Illustration of a fresh orange with a green leaf</desc>
+  <defs>
+    <radialGradient id="orangeBody" cx="38%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffbb5c" />
+      <stop offset="55%" stop-color="#ff8f1f" />
+      <stop offset="100%" stop-color="#f06a00" />
+    </radialGradient>
+    <linearGradient id="leafColor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ccf57" />
+      <stop offset="100%" stop-color="#3e8f31" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="#fff7ed" />
+  <circle cx="300" cy="325" r="200" fill="url(#orangeBody)" />
+  <circle cx="300" cy="325" r="200" fill="none" stroke="#e46200" stroke-width="8" />
+  <ellipse cx="340" cy="150" rx="85" ry="45" transform="rotate(-22 340 150)" fill="url(#leafColor)" />
+  <path d="M305 145c30-42 82-60 136-43" fill="none" stroke="#2f6f23" stroke-linecap="round" stroke-width="12" />
+  <circle cx="300" cy="325" r="142" fill="none" stroke="#ffa03d" stroke-width="10" opacity=".5" />
+  <circle cx="245" cy="265" r="24" fill="#ffca7a" opacity=".55" />
+</svg>
