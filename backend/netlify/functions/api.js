@@ -2,20 +2,25 @@ const serverless = require("serverless-http");
 const app = require("../../Server");
 const { initialize } = require("../../Config/db");
 
-let dbInitialized = false;
-let dbPromise;
+const expressHandler = serverless(app);
 
-const handler = async (event, context) => {
-  if (!dbInitialized) {
-    if (!dbPromise) {
-      dbPromise = initialize();
-    }
+exports.handler = async (event, context) => {
+  try {
+    await initialize();
 
-    await dbPromise;
-    dbInitialized = true;
+    return await expressHandler(event, context);
+  } catch (error) {
+    console.error("Backend error:", error);
+
+    return {
+      statusCode: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        error: "Backend initialization failed",
+        message: error.message,
+      }),
+    };
   }
-
-  return serverless(app)(event, context);
 };
-
-module.exports.handler = handler;
