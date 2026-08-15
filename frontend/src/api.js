@@ -1,7 +1,8 @@
 import fallbackProducts from './data/products';
 
 export const API_URL =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, '') || 'http://localhost:8000/api';
+  import.meta.env.VITE_API_URL?.replace(/\/$/, '') ||
+  (import.meta.env.DEV ? 'http://localhost:8000/api' : '/api');
 
 export const CUSTOMER_STORAGE_KEY = 'blinkit_customer';
 export const CHECKOUT_STORAGE_KEY = 'blinkit_checkout_details';

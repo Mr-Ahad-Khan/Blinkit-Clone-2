@@ -1,0 +1,27 @@
+[build]
+  # Dependencies are installed from backend/package.json, which also contains
+  # the Netlify Function dependencies. The frontend is built from here.
+  base = "backend"
+  command = "npm --prefix ../frontend ci && npm --prefix ../frontend run build"
+  publish = "../frontend/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Send client-side routes to the Vite entry point so direct visits and refreshes
+# work with React Router.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["cors", "dotenv", "express", "mongoose", "serverless-http"]
